@@ -62,7 +62,7 @@ export default function ProjectCard({ project }) {
           </div>
         </Description>
       </Project>
-      <style jsx>{`
+      {/* <style jsx>{`
         .image {
           max-width: 1000px;
           height: auto;
@@ -84,9 +84,6 @@ export default function ProjectCard({ project }) {
           text-decoration: none;
           color: inherit;
         }
-        a:hover {
-          /* color: #F05454; */
-        }
         img {
           border-radius: 10px;
           max-width: 700px;
@@ -94,7 +91,7 @@ export default function ProjectCard({ project }) {
           display: block;
           margin: 0 auto;
         }
-      `}</style>
+      `}</style> */}
     </>
   );
 }
