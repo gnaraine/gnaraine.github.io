@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 const Project = styled.div`
   //border: blue solid 1px;
@@ -45,7 +44,7 @@ export default function ProjectCard({ project }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <img
               src={"https:" + image.fields.file.url}
               width={image.fields.file.details.image.width}
               height={image.fields.file.details.image.height}

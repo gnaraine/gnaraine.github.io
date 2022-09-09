@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 const Container = styled.nav`
   height: 100px;
@@ -41,7 +40,7 @@ export default function Navbar({ onClick }) {
       <Container>
         <Nav>
           <a className="logo">
-            <Image src="/logo.png" alt="logo" width={100} height={100} />
+            <img src="/logo.png" alt="logo" width={100} height={100} />
           </a>
 
           <NavMenu>
