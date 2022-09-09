@@ -62,7 +62,7 @@ export default function ProjectCard({ project }) {
           </div>
         </Description>
       </Project>
-      {/* <style jsx>{`
+      <style jsx>{`
         .image {
           max-width: 1000px;
           height: auto;
@@ -91,7 +91,7 @@ export default function ProjectCard({ project }) {
           display: block;
           margin: 0 auto;
         }
-      `}</style> */}
+      `}</style>
     </>
   );
 }
