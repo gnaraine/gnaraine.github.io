@@ -101,6 +101,30 @@ export default function Home({ projects, skills, about }) {
           border: #f05454 solid 1px;
         }
       `}</style>
+
+      <style global jsx>{`
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: "Poppins", sans-serif;
+          background-image: linear-gradient(
+            to bottom,
+            #222831,
+            #262f3c,
+            #2a3747,
+            #2d3f52,
+            #30475e
+          );
+          color: #f5f5f5;
+          margin: 0 auto;
+        }
+      `}</style>
     </>
   );
 }
