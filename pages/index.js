@@ -69,9 +69,37 @@ export default function Home({ projects, skills, about }) {
       </div>
 
       <style jsx>{`
-      
-      
-      
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          max-width: 1200px;
+          margin: 20px auto;
+          gap: 50px;
+        }
+
+        .nav {
+          grid-row: 1 / span 1;
+          z-index: 999;
+        }
+        .about {
+          max-width: 1400px;
+          grid-row: span 1;
+        }
+        .skills {
+          grid-row: 1 / span 1;
+          margin: 0 auto;
+          margin-bottom: 100px;
+        }
+        .projects {
+          grid-row: 1 / span 1;
+          margin: 0 auto;
+        }
+
+        .content {
+          background: #f5f5f5;
+          border-radius: 6px;
+          border: #f05454 solid 1px;
+        }
       `}</style>
     </>
   );
