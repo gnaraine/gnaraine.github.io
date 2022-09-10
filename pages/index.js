@@ -68,7 +68,11 @@ export default function Home({ projects, skills, about }) {
         </div>
       </div>
 
-      <style jsx>{``}</style>
+      <style jsx>{`
+      
+      
+      
+      `}</style>
     </>
   );
 }
