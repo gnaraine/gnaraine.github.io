@@ -62,7 +62,7 @@ export default function ProjectCard({ project }) {
         }
 
         .image {
-          max-width: 1000px;
+          max-width: 710px;
           height: auto;
           padding: 5px;
           border-radius: 10px;
@@ -81,6 +81,7 @@ export default function ProjectCard({ project }) {
         a {
           text-decoration: none;
           color: inherit;
+          display: block;
         }
         img {
           border-radius: 10px;
@@ -88,6 +89,20 @@ export default function ProjectCard({ project }) {
           height: auto;
           display: block;
           margin: 0 auto;
+        }
+
+        @media (max-width: 760px) {
+          /* .description {
+            margin: 0;
+            max-width: 100%;
+          }
+
+          .project {
+            border-top: #f5f5f5 solid 2px;
+            padding: 50px 20px;
+            display: block;
+            text-align: center;
+          } */
         }
       `}</style>
     </>
