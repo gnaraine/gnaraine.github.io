@@ -85,15 +85,9 @@ export default function Navbar({ onClick }) {
           }
 
           .nav {
-            border: red solid 1px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
           }
 
           .navMenu {
-            border: blue solid 1px;
           }
         }
       `}</style>
