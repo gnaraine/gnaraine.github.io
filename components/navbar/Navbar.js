@@ -79,12 +79,15 @@ export default function Navbar({ onClick }) {
           transform-origin: bottom left;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 760px) {
           .logo {
             display: none;
           }
 
           .nav {
+            /* border: red solid 1px; */
+            font-size: 2rem;
+            display: block;
           }
 
           .navMenu {
