@@ -1,49 +1,13 @@
-import styled from "styled-components";
-
-const Container = styled.nav`
-  height: 100px;
-  border-bottom: #f05454 solid 2px;
-  @media (max-width: 700px) {
-  }
-`;
-
-const Nav = styled.div`
-  margin: 0 auto;
-  max-width: 1400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0px 60px;
-
-  @media (max-width: 700px) {
-    .logo {
-      display: none;
-    }
-    display: block;
-    text-align: center;
-  }
-`;
-
-const NavMenu = styled.div`
-  padding: 20px 0px;
-  align-items: center;
-  justify-self: end;
-
-  @media (max-width: 700px) {
-    /* display: block;
-    padding: 20px 0px; */
-  }
-`;
-
 export default function Navbar({ onClick }) {
   return (
     <>
-      <Container>
-        <Nav>
+      <div className="container">
+        <div className="nav">
           <a className="logo">
             <img src="/logo.png" alt="logo" width={100} height={100} />
           </a>
 
-          <NavMenu>
+          <div className="navMenu">
             {/* <button href="#" onClick={onClick} value={"about"}>
               About
             </button> */}
@@ -59,10 +23,29 @@ export default function Navbar({ onClick }) {
             {/* <button href="#" onClick={onClick} value={"resume"}>
               Resume
             </button> */}
-          </NavMenu>
-        </Nav>
-      </Container>
+          </div>
+        </div>
+      </div>
       <style jsx>{`
+        .container {
+          height: 100px;
+          border-bottom: #f05454 solid 2px;
+        }
+
+        .nav {
+          margin: 0 auto;
+          max-width: 1400px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding: 0px 60px;
+        }
+
+        .navMenu {
+          padding: 20px 0px;
+          align-items: center;
+          justify-self: end;
+        }
+
         button {
           border: none;
           background: none;
@@ -94,6 +77,17 @@ export default function Navbar({ onClick }) {
           background-color: #f05454;
           transform: scaleX(1);
           transform-origin: bottom left;
+        }
+
+        @media (max-width: 700px) {
+          .logo {
+            display: none;
+          }
+
+          .nav {
+            display: block;
+            text-align: center;
+          }
         }
       `}</style>
     </>
