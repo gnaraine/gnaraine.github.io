@@ -10,17 +10,17 @@ export default function Navbar({ onClick }) {
           <div className="navMenu">
             {/* <button href="#" onClick={onClick} value={"about"}>
               About
-            </button> */}
+            </button>
             <button href="#" onClick={onClick} value={"skills"}>
               Skills
             </button>
             <button href="#" onClick={onClick} value={"projects"}>
               Projects
             </button>
-            {/* <button href="#" onClick={onClick} value={"contact"}>
+            <button href="#" onClick={onClick} value={"contact"}>
               Contact
-            </button> */}
-            {/* <button href="#" onClick={onClick} value={"resume"}>
+            </button>
+            <button href="#" onClick={onClick} value={"resume"}>
               Resume
             </button> */}
           </div>
