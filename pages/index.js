@@ -1,3 +1,4 @@
+import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar/Navbar";
 import AboutBox from "../components/about/AboutBox";
 import SkillList from "../components/skills/SkillList";
@@ -50,81 +51,25 @@ export default function Home({ projects, skills, about }) {
       <Head>
         <title>Giunauth Naraine</title>
       </Head>
-      <div className="grid-container">
+      <div className={styles.gridContainer}>
         <div className="nav">
           <Navbar onClick={(e) => handleClick(e.target.value)} />
         </div>
-        <div ref={aboutPage} className="about">
+        <div ref={aboutPage} className={styles.about}>
           <AboutBox about={about} />
         </div>
 
-        <div className="content">
-          <div ref={skillsPage} className="skills">
+        <div className={styles.content}>
+          <div ref={skillsPage} className={styles.skills}>
             <SkillList skills={skills} />
           </div>
-          <div ref={projectsPage} className="projects">
+          <div ref={projectsPage} className={styles.projects}>
             <ProjectList projects={projects} />
           </div>
         </div>
       </div>
 
-      <style jsx>{`
-        .grid-container {
-          display: grid;
-          grid-template-columns: 1fr;
-          max-width: 1200px;
-          margin: 20px auto;
-          gap: 50px;
-        }
 
-        .nav {
-          grid-row: 1 / span 1;
-          z-index: 999;
-        }
-        .about {
-          max-width: 1400px;
-          grid-row: span 1;
-        }
-        .skills {
-          grid-row: 1 / span 1;
-          margin: 0 auto;
-          margin-bottom: 100px;
-        }
-        .projects {
-          grid-row: 1 / span 1;
-          margin: 0 auto;
-        }
-
-        .content {
-          background: #f5f5f5;
-          border-radius: 6px;
-          border: #f05454 solid 1px;
-        }
-      `}</style>
-
-      <style global jsx>{`
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
-
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
-
-        body {
-          font-family: "Poppins", sans-serif;
-          background-image: linear-gradient(
-            to bottom,
-            #222831,
-            #262f3c,
-            #2a3747,
-            #2d3f52,
-            #30475e
-          );
-          color: #f5f5f5;
-          margin: 0 auto;
-        }
-      `}</style>
     </>
   );
 }

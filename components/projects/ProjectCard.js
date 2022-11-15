@@ -1,15 +1,11 @@
+import styles from "../../styles/projects/ProjectCard.module.css";
 export default function ProjectCard({ project }) {
-  const { title, description, image, linkTo } = project.fields;
+  const { title, description, image, linkTo, linkLive } = project.fields;
   return (
     <>
-      <div className="project">
-        <div className="image">
-          <a
-            className="image-wrapper"
-            href={linkTo}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <div className={styles.project}>
+        <div className={styles.image}>
+          <a href={linkTo} target="_blank" rel="noopener noreferrer">
             <img
               src={"https:" + image.fields.file.url}
               width={image.fields.file.details.image.width}
@@ -17,7 +13,7 @@ export default function ProjectCard({ project }) {
             />
           </a>
         </div>
-        <div className="description">
+        <div className={styles.description}>
           <div>
             <h1>
               <a href={linkTo} target="_blank" rel="noopener noreferrer">
@@ -25,86 +21,16 @@ export default function ProjectCard({ project }) {
               </a>
             </h1>
             <p>{description}</p>
+
+            {console.log(linkLive)}
+            <div className={styles.liveLink}>
+              <p className={linkLive === undefined ? styles.hidden : ""}>
+                <a href={linkLive}>Live Version</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <style jsx>{`
-        .project {
-          //border: blue solid 1px;
-          //width: 95%;
-          max-width: 1000px;
-          margin: 50px auto;
-          align-items: center;
-          display: flex;
-          @media (max-width: 760px) {
-            border-top: #f5f5f5 solid 2px;
-            padding: 50px 20px;
-            display: block;
-            text-align: center;
-          }
-        }
-
-        .description {
-          //border: pink solid 1px;
-          z-index: 999;
-          max-width: 400px;
-          background-color: #30475e;
-          display: flex;
-          padding: 30px;
-          border-radius: 8px;
-          color: white;
-          margin-left: -250px;
-          border: 3px solid #f05454;
-          @media (max-width: 760px) {
-            margin: 0;
-            max-width: 100%;
-          }
-        }
-
-        .image {
-          max-width: 710px;
-          height: auto;
-          padding: 5px;
-          border-radius: 10px;
-        }
-        .image:hover {
-          background: linear-gradient(
-            to bottom,
-            #f05454,
-            #ca4a7e,
-            #8d508e,
-            #515180,
-            #30475e
-          );
-        }
-
-        a {
-          text-decoration: none;
-          color: inherit;
-          display: block;
-        }
-        img {
-          border-radius: 10px;
-          max-width: 700px;
-          height: auto;
-          display: block;
-          margin: 0 auto;
-        }
-
-        @media (max-width: 760px) {
-          /* .description {
-            margin: 0;
-            max-width: 100%;
-          }
-
-          .project {
-            border-top: #f5f5f5 solid 2px;
-            padding: 50px 20px;
-            display: block;
-            text-align: center;
-          } */
-        }
-      `}</style>
     </>
   );
 }
