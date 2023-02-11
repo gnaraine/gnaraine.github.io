@@ -43,13 +43,12 @@ export default function Home({ projects, skills, about }) {
       projectsPage.current?.scrollIntoView({ behavior: "smooth" });
     }
 
-    console.log("clicked " + e);
   };
 
   return (
     <>
       <Head>
-        <title>Giunauth Naraine</title>
+        <title>Steve Naraine</title>
       </Head>
       <div className={styles.gridContainer}>
         <div className="nav">

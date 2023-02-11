@@ -22,7 +22,6 @@ export default function ProjectCard({ project }) {
             </h1>
             <p>{description}</p>
 
-            {console.log(linkLive)}
             <div className={styles.liveLink}>
               <p className={linkLive === undefined ? styles.hidden : ""}>
                 <a href={linkLive}>Live Version</a>

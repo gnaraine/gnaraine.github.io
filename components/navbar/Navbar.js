@@ -4,7 +4,7 @@ export default function Navbar({ onClick }) {
     <>
       <div className={styles.container}>
         <div className={styles.nav}>
-          <a className={styles.logo}>
+          <a className={styles.logo} href="https://github.com/gnaraine">
             <img src="/logo.png" alt="logo" width={100} height={100} />
           </a>
 
