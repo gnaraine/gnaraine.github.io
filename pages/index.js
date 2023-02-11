@@ -49,7 +49,7 @@ export default function Home({ projects, skills, about }) {
   return (
     <>
       <Head>
-        <title>Giunauth Naraine</title>
+        <title>Steve Naraine</title>
       </Head>
       <div className={styles.gridContainer}>
         <div className="nav">
