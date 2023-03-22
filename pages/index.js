@@ -48,7 +48,7 @@ export default function Home({ projects, skills, about }) {
   return (
     <>
       <Head>
-        <title>Steve Naraine</title>
+        <title>Giunauth Naraine</title>
       </Head>
       <div className={styles.gridContainer}>
         <div className="nav">
